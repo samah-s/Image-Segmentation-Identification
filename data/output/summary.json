@@ -1,0 +1,30 @@
+[
+    {
+        "unique_id": "inp_image_0",
+        "description": "a pot of green plants",
+        "bbox": [
+            56,
+            91,
+            146,
+            321
+        ],
+        "confidence": 0.8859655261039734,
+        "class": 58,
+        "colors": "rosybrown",
+        "identified_name": "potted plant"
+    },
+    {
+        "unique_id": "inp_image_1",
+        "description": "a living room with a couch and a chair",
+        "bbox": [
+            290,
+            195,
+            464,
+            338
+        ],
+        "confidence": 0.5809467434883118,
+        "class": 59,
+        "colors": "rosybrown",
+        "identified_name": "bed"
+    }
+]

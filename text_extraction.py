@@ -25,7 +25,7 @@ def extract_text(image_path):
         print(f"Error extracting text from {image_path}: {e}")
         return ""
 
-def extract_text_from_directory(image_dir):
+def extract_text_from_directory(image_dir, master_image_dir):
     """
     Extracts text from all images in a given directory.
     
@@ -36,10 +36,18 @@ def extract_text_from_directory(image_dir):
         dict: A dictionary containing extracted text keyed by image file names.
     """
     text_data = {}
+
     
     for image_file in os.listdir(image_dir):
         if image_file.endswith('.jpg') or image_file.endswith('.png'):
             image_path = os.path.join(image_dir, image_file)
+            print(f"Extracting text from {image_file}...")
+            text = extract_text(image_path)
+            text_data[image_file] = text
+    
+    for image_file in os.listdir(master_image_dir):
+        if image_file.endswith('.jpg') or image_file.endswith('.png'):
+            image_path = os.path.join(master_image_dir, image_file)
             print(f"Extracting text from {image_file}...")
             text = extract_text(image_path)
             text_data[image_file] = text
@@ -62,12 +70,13 @@ def save_text_data(text_data, output_file):
 def extract_text_main():
     # Directory containing object images
     image_dir = 'Documents/personal/completed-projects/ML/ImageSegmentation/data/segmented_objects/'
+    master_image_dir = 'Documents/personal/completed-projects/ML/ImageSegmentation/data/input_images/'
     
     # Output JSON file to save extracted text data
     output_file = 'Documents/personal/completed-projects/ML/ImageSegmentation/data/output/extracted_text_data.json'
     
     # Extract text from images and save to file
-    text_data = extract_text_from_directory(image_dir)
+    text_data = extract_text_from_directory(image_dir, master_image_dir)
     save_text_data(text_data, output_file)
     
     print(f"Text extraction completed. Data saved to {output_file}")

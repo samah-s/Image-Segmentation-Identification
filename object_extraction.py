@@ -6,6 +6,7 @@ import json
 import object_identification
 import yolo_segmentation
 import text_extraction
+import object_summary
 
 
 # Define the paths
@@ -91,6 +92,8 @@ def main(image_path):
 
     object_identification.identify_object()
     text_extraction.extract_text_main()
+    object_summary.generate_summary()
+
 
 if __name__ == '__main__':
     image_path = os.path.join(IMAGE_DIR, 'inp_image.jpg')

@@ -1,10 +1,4 @@
 {
-    "inp_image_0.jpg": "No object detected",
-    "inp_image_1.jpg": "vase",
-    "inp_image_2.jpg": "No object detected",
-    "inp_image_3.jpg": "bench",
-    "inp_image_4.jpg": "No object detected",
-    "inp_image_5.jpg": "book",
-    "inp_image_6.jpg": "book",
-    "inp_image_7.jpg": "vase"
+    "inp_image_0.jpg": "potted plant",
+    "inp_image_1.jpg": "bed"
 }
