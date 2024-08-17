@@ -30,7 +30,7 @@ def plot_image_with_annotations(master_image_data, output_dir):
     # Draw bounding boxes and annotations for each object
     for obj in master_image_data['objects']:
         bbox = obj['bbox']
-        label = f"{obj['identified_name']} ({obj['unique_id']}): \n{obj['description']}"
+        label = f"{obj['identified_name']} ({obj['unique_id']})"
         draw_bbox(ax, bbox, label, color='blue')
 
     # Save the annotated image
@@ -38,6 +38,9 @@ def plot_image_with_annotations(master_image_data, output_dir):
     plt.axis('off')
     plt.savefig(output_image_path, bbox_inches='tight', pad_inches=0)
     plt.close(fig)  # Close the figure after saving
+
+import matplotlib.pyplot as plt
+import os
 
 def generate_summary_table(master_image_data, output_dir):
     # Create a table of object data
@@ -47,26 +50,39 @@ def generate_summary_table(master_image_data, output_dir):
             obj['unique_id'],
             obj['identified_name'],
             obj['description'],
-            obj['confidence'],
+            f"{obj['confidence']:.2f}",
             obj['class'],
             obj['colors']
         ])
     
     # Plot table
-    fig, ax = plt.subplots(1, figsize=(10, len(table_data) * 0.8))
+    fig, ax = plt.subplots(figsize=(12, len(table_data) * 0.6))  # Increased figure size for clarity
     ax.axis('tight')
     ax.axis('off')
+    
+    # Create and customize table
     table = ax.table(
         cellText=table_data,
         colLabels=['Unique ID', 'Identified Name', 'Description', 'Confidence', 'Class', 'Colors'],
         cellLoc='center',
-        loc='center'
+        loc='center',
+        cellColours=[[None]*6 for _ in table_data],  # Optional: Customize cell colors if needed
+        colColours=['lightgrey']*6  # Optional: Customize column header background color
     )
+    
+    # Set font size
+    table.auto_set_font_size(False)
+    table.set_fontsize(12)
+    
+    # Auto adjust column widths
+    table.auto_set_column_width([i for i in range(len(table_data[0]))])
+    
+    # Save the table as an image with higher resolution
     image_path = master_image_data['image_path']
-    # Save the table as an image
     output_table_path = os.path.join(output_dir, f'{os.path.basename(image_path).split(".")[0]}_summary_table.jpg')
-    plt.savefig(output_table_path, bbox_inches='tight', pad_inches=0.1)
+    plt.savefig(output_table_path, bbox_inches='tight', pad_inches=0.1, dpi=300)  # Increased DPI to 300
     plt.close(fig)  # Close the figure after saving
+
 
 def final_output():
     final_mapping = load_final_mapping(FINAL_MAPPING_FILE)
