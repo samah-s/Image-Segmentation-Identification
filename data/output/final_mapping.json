@@ -1,0 +1,38 @@
+{
+    "inp_image": {
+        "image_path": "Documents/personal/completed-projects/ML/ImageSegmentation/data/input_images/inp_image.jpg",
+        "extracted_text": "",
+        "objects": [
+            {
+                "unique_id": "inp_image_0",
+                "image_path": "Documents/personal/completed-projects/ML/ImageSegmentation/data/segmented_objects/inp_image_0.jpg",
+                "bbox": [
+                    56,
+                    91,
+                    146,
+                    321
+                ],
+                "confidence": 0.8859655261039734,
+                "class": 58,
+                "description": "a pot of green plants",
+                "identified_name": "potted plant",
+                "colors": "rosybrown"
+            },
+            {
+                "unique_id": "inp_image_1",
+                "image_path": "Documents/personal/completed-projects/ML/ImageSegmentation/data/segmented_objects/inp_image_1.jpg",
+                "bbox": [
+                    290,
+                    195,
+                    464,
+                    338
+                ],
+                "confidence": 0.5809467434883118,
+                "class": 59,
+                "description": "a living room with a couch and a chair",
+                "identified_name": "bed",
+                "colors": "rosybrown"
+            }
+        ]
+    }
+}

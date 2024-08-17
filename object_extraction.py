@@ -7,6 +7,8 @@ import object_identification
 import yolo_segmentation
 import text_extraction
 import object_summary
+import mapping
+import output_generation
 
 
 # Define the paths
@@ -93,6 +95,8 @@ def main(image_path):
     object_identification.identify_object()
     text_extraction.extract_text_main()
     object_summary.generate_summary()
+    mapping.generate_final_mappingg()
+    output_generation.final_output()
 
 
 if __name__ == '__main__':
