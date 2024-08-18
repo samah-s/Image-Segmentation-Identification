@@ -6,11 +6,11 @@ This repository provides a comprehensive pipeline for object identification, seg
 ## Project Structure
 
 .
-├── models_dir
-│ ├── segmentation_model.py
-│ ├── identification_model.py
-│ ├── text_extraction_model.py
-│ └── summarization_model.py
+├── models_dir  
+│ ├── segmentation_model.py  
+│ ├── identification_model.py  
+│ ├── text_extraction_model.py  
+│ └── summarization_model.py  
 ├── utils_dir
 │ ├── paths.py
 │ ├── data_mapping.py
