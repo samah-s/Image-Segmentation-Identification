@@ -6,13 +6,9 @@ import torch
 from sklearn.cluster import KMeans
 from transformers import BlipProcessor, BlipForConditionalGeneration
 import webcolors
-
-# Define the paths
-DATA_DIR = 'Documents/personal/completed-projects/ML/ImageSegmentation/data/'
-OUTPUT_DIR = os.path.join(DATA_DIR, 'segmented_objects/')
-SUMMARY_FILE = os.path.join(DATA_DIR, 'output/summary.json')
-METADATA_FILE = os.path.join(DATA_DIR, 'output/metadata.json')
-OBJECT_DESCRIPTIONS_FILE = os.path.join(DATA_DIR, 'output/object_descriptions.json')
+from colorthief import ColorThief
+import webcolors
+from utils_dir.paths import *
 
 # Load the image captioning model
 def load_captioning_model():
@@ -28,8 +24,7 @@ def generate_description(image_path, processor, model):
     description = processor.decode(out[0], skip_special_tokens=True)
     return description
 
-from colorthief import ColorThief
-import webcolors
+
 
 def closest_color(requested_color):
     min_colors = {}

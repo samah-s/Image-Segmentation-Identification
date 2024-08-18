@@ -3,6 +3,8 @@ import pytesseract
 from PIL import Image
 import os
 import json
+from utils_dir.paths import *
+
 
 # Configure the path to the Tesseract executable (adjust as needed)
 pytesseract.pytesseract.tesseract_cmd = r"C:\Program Files\Tesseract-OCR\tesseract.exe"
@@ -69,11 +71,11 @@ def save_text_data(text_data, output_file):
 
 def extract_text_main():
     # Directory containing object images
-    image_dir = 'Documents/personal/completed-projects/ML/ImageSegmentation/data/segmented_objects/'
-    master_image_dir = 'Documents/personal/completed-projects/ML/ImageSegmentation/data/input_images/'
+    image_dir = SEGMENTED_OBJECTS_DIR
+    master_image_dir = MASTER_IMAGE_DIR
     
     # Output JSON file to save extracted text data
-    output_file = 'Documents/personal/completed-projects/ML/ImageSegmentation/data/output/extracted_text_data.json'
+    output_file = EXTRACTED_TEXT_FILE
     
     # Extract text from images and save to file
     text_data = extract_text_from_directory(image_dir, master_image_dir)

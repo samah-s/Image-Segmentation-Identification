@@ -2,6 +2,7 @@ import torch
 from PIL import Image
 import os
 import json
+from utils_dir.paths import *
 
 # Load the pre-trained YOLOv5 model for object identification
 model = torch.hub.load('ultralytics/yolov5', 'yolov5l', pretrained=True)
@@ -54,10 +55,10 @@ def save_descriptions(descriptions, output_file):
 
 def identify_object():
     # Directory containing segmented object images
-    image_dir = 'Documents/personal/completed-projects/ML/ImageSegmentation/data/segmented_objects/'
+    image_dir = SEGMENTED_OBJECTS_DIR
 
     # Output JSON file to save object descriptions
-    output_file = 'Documents/personal/completed-projects/ML/ImageSegmentation/data/output/object_descriptions.json'
+    output_file = OBJECT_DESCRIPTIONS_FILE
     
     # Identify objects and generate descriptions
     descriptions = identify_objects(image_dir)

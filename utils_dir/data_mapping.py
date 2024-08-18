@@ -1,11 +1,6 @@
 import json
 import os
-
-# Paths to your JSON files
-METADATA_FILE = 'Documents/personal/completed-projects/ML/ImageSegmentation/data/output/metadata.json'
-EXTRACTED_TEXT_FILE = 'Documents/personal/completed-projects/ML/ImageSegmentation/data/output/extracted_text_data.json'
-SUMMARY_FILE = 'Documents/personal/completed-projects/ML/ImageSegmentation/data/output/summary.json'
-MASTER_IMAGE_PATH = "Documents/personal/completed-projects/ML/ImageSegmentation/data/input_images/"
+from utils_dir.paths import *
 
 def load_json_data(file_path):
     print(f"Loading data from {file_path}...")
@@ -30,7 +25,7 @@ def map_data_to_master_image(metadata, extracted_text, summary):
         # Initialize the master image mapping if not already done
         if master_id not in master_image_mapping:
             master_image_mapping[master_id] = {
-                'image_path': MASTER_IMAGE_PATH+master_id+".jpg",  # master image path
+                'image_path': MASTER_IMAGE_DIR+master_id+".jpg",  # master image path
                 'extracted_text': extracted_text.get(f"{master_id}.jpg", ""),  # extracted text
                 'objects': []
             }
@@ -62,7 +57,7 @@ def generate_final_mapping():
     final_mapping = map_data_to_master_image(metadata, extracted_text, summary)
     
     # Output the final mapping
-    output_file = 'Documents/personal/completed-projects/ML/ImageSegmentation/data/output/final_mapping.json'
+    output_file = FINAL_MAPPING_FILE
     with open(output_file, 'w') as file:
         json.dump(final_mapping, file, indent=4)
     

@@ -3,9 +3,9 @@ import os
 import matplotlib.pyplot as plt
 import matplotlib.patches as patches
 from PIL import Image
-
-# Path to the final mapping JSON
-FINAL_MAPPING_FILE = 'Documents/personal/completed-projects/ML/ImageSegmentation/data/output/final_mapping.json'
+import torch
+import numpy as np
+from utils_dir.paths import *
 
 def load_final_mapping(file_path):
     with open(file_path, 'r') as file:
@@ -88,7 +88,7 @@ def final_output():
     final_mapping = load_final_mapping(FINAL_MAPPING_FILE)
 
     # Output directory for annotated images and tables
-    output_dir = 'Documents/personal/completed-projects/ML/ImageSegmentation/data/output/'
+    output_dir = OUTPUT_DIR
 
     for master_id, master_image_data in final_mapping.items():
         print(f"Processing master image: {master_id}")
@@ -99,5 +99,27 @@ def final_output():
         # Generate the summary table
         generate_summary_table(master_image_data, output_dir)
 
-if __name__ == '__main__':
-    final_output()
+
+def visualize_results(image, boxes, output_path):
+    """
+    Visualizes the detection results and saves the output image.
+    
+    Args:
+        image (PIL.Image.Image): The original image.
+        boxes (tensor): Bounding boxes for detected objects.
+        output_path (str): Path to save the visualized image.
+    """
+    fig, ax = plt.subplots(1, 1, figsize=(12, 8))
+    ax.imshow(np.array(image))
+
+    for box in boxes:
+        x1, y1, x2, y2, conf, cls = box
+        rect = plt.Rectangle((x1, y1), x2-x1, y2-y1, linewidth=2, edgecolor='r', facecolor='none')
+        ax.add_patch(rect)
+        ax.text(x1, y1, f'{conf:.2f}', bbox=dict(facecolor='yellow', alpha=0.5), fontsize=12, color='black')
+
+    plt.axis('off')
+    plt.savefig(output_path)
+    plt.close()
+    print(f"Visualized output saved to {output_path}")
+

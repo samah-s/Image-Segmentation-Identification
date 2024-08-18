@@ -3,20 +3,9 @@ import torch
 from PIL import Image
 import numpy as np
 import json
-import object_identification
-import yolo_segmentation
-import text_extraction
-import object_summary
-import mapping
-import output_generation
-
-
-# Define the paths
-DATA_DIR = 'Documents/personal/completed-projects/ML/ImageSegmentation/data/'
-IMAGE_DIR = 'Documents/personal/completed-projects/ML/ImageSegmentation/data/input_images/'
-OUTPUT_DIR = os.path.join(DATA_DIR, 'segmented_objects/')
-OUTPUT_FINAL_DIR = os.path.join(DATA_DIR, 'output/')
-METADATA_FILE = os.path.join(DATA_DIR, 'output/metadata.json')
+import utils_dir.data_mapping as data_mapping
+import utils_dir.visualization as visualization
+from utils_dir.paths import *
 
 # Ensure the output directory exists
 os.makedirs(OUTPUT_DIR, exist_ok=True)
@@ -48,7 +37,7 @@ def save_object_images(image_np, boxes, master_id):
         unique_id = f'{master_id}_{i}'
         
         # Save object image
-        object_image_path = os.path.join(OUTPUT_DIR, f'{unique_id}.jpg')
+        object_image_path = os.path.join(SEGMENTED_OBJECTS_DIR, f'{unique_id}.jpg')
         object_image_pil.save(object_image_path)
         
         # Append metadata
@@ -75,7 +64,8 @@ def fetch_images_by_master_id(master_id):
     return [entry['image_path'] for entry in metadata if entry['master_id'] == master_id]
 
 # Main function
-def main(image_path):
+def image_segmentation():
+    image_path = INPUT_IMAGE_FILE
     master_id = os.path.basename(image_path).split('.')[0]
     image = Image.open(image_path)
 
@@ -83,7 +73,7 @@ def main(image_path):
     model = load_model()
     image_np, boxes = process_image(model, image_path)
 
-    yolo_segmentation.visualize_results(image, boxes, OUTPUT_FINAL_DIR)
+    visualization.visualize_results(image, boxes, OUTPUT_DIR)
     
     # Save object images and metadata
     save_object_images(image_np, boxes, master_id)
@@ -92,13 +82,6 @@ def main(image_path):
     object_images = fetch_images_by_master_id(master_id)
     print(f'Fetched {len(object_images)} images for master ID {master_id}')
 
-    object_identification.identify_object()
-    text_extraction.extract_text_main()
-    object_summary.generate_summary()
-    mapping.generate_final_mapping()
-    output_generation.final_output()
+    
 
 
-if __name__ == '__main__':
-    image_path = os.path.join(IMAGE_DIR, 'inp_image.jpg')
-    main(image_path)
