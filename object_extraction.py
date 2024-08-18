@@ -95,7 +95,7 @@ def main(image_path):
     object_identification.identify_object()
     text_extraction.extract_text_main()
     object_summary.generate_summary()
-    mapping.generate_final_mappingg()
+    mapping.generate_final_mapping()
     output_generation.final_output()
 
 

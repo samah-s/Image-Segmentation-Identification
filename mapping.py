@@ -14,9 +14,7 @@ def load_json_data(file_path):
     print(f"Data loaded from {file_path}.")
     return data
 
-metadata = load_json_data(METADATA_FILE)
-extracted_text = load_json_data(EXTRACTED_TEXT_FILE)
-summary = load_json_data(SUMMARY_FILE)
+
 
 def map_data_to_master_image(metadata, extracted_text, summary):
     # Dictionary to hold all master image mappings
@@ -57,6 +55,9 @@ def map_data_to_master_image(metadata, extracted_text, summary):
     return master_image_mapping
 
 def generate_final_mapping():
+    metadata = load_json_data(METADATA_FILE)
+    extracted_text = load_json_data(EXTRACTED_TEXT_FILE)
+    summary = load_json_data(SUMMARY_FILE)
     print("Generating final mapping...")
     final_mapping = map_data_to_master_image(metadata, extracted_text, summary)
     
@@ -67,5 +68,4 @@ def generate_final_mapping():
     
     print(f"Final mapping written to {output_file}.")
 
-if __name__ == '__main__':
-    generate_final_mapping()
+
