@@ -1,30 +1,14 @@
 # Object Identification, Segmentation, and Annotation Pipeline
 
 ## Overview
-This repository provides a comprehensive pipeline for object identification, segmentation, and annotation. The pipeline utilizes various deep learning models for object detection, image captioning, text extraction, and data summarization. The final output includes annotated images with bounding boxes, object descriptions, dominant colors, and a summary table of object attributes.
+This project involves several steps to perform object detection, segmentation, and analysis on images. The overall workflow includes the following:
 
-## Project Structure
-
-.  
-├── models_dir  
-│ ├── segmentation_model.py  
-│ ├── identification_model.py  
-│ ├── text_extraction_model.py  
-│ └── summarization_model.py  
-├── utils_dir  
-│ ├── paths.py  
-│ ├── data_mapping.py  
-│ └── visualization.py  
-├── input_data  
-│ ├── input_image.jpg  
-│ ├── segmented_objects  
-│ └── master_images  
-├── output_data  
-│ ├── final_mapping.json  
-│ ├── summaries.json  
-│ └── annotated_images  
-├── main_pipeline.py  
-└── README.md  
+* Image Segmentation: Objects within an image are detected and segmented using a pre-trained YOLOv5 model.
+* Object Identification: The segmented objects are identified using the same model.
+* Text Extraction: Any text present in the images is extracted using Tesseract OCR.
+* Object Summarization: The objects are described using a pre-trained BLIP image captioning model. Their dominant colors are also identified.
+* Data Mapping: The extracted data (text, object descriptions, and color) is mapped to the original images.
+* Visualization: The results are visualized by generating annotated images and summary table
 
 
 
@@ -68,30 +52,37 @@ Annotated images with bounding boxes, labels, and summary tables are generated a
 ```python
 visualization.final_output()
 ```
-## Usage
-To run the entire pipeline, execute the main_pipeline.py script:
 
-```python
-python main_pipeline.py
-```
 
-Ensure that the input images are placed in the input_data directory, and the results will be saved in the output_data directory.
 
-## Dependencies
-Python 3.7+
-PyTorch
-Tesseract OCR
-BLIP (Salesforce)
-Webcolors
-Colorthief
-Matplotlib
-Pillow
-Scikit-learn
-Transformers
-Others mentioned in requirements.txt
 ## Installation
-To install the required dependencies, you can use the following command:
+### Prerequisites
+Python 3.7+  
+PyTorch  
+Tesseract OCR (for text extraction)  
+Various Python packages (listed in requirements.txt)  
 
+### Setup
+1. Clone the repository:
+```bash
+git clone https://github.com/your-repo-name/project-name.git
+```
+2. Install the required Python packages:
 ```bash
 pip install -r requirements.txt
 ```
+3. Ensure Tesseract OCR is installed and its path is correctly set in models_dir/text_extraction_model.py.
+
+## Usaage
+
+### Running the full pipeline
+To execute the entire pipeline, run the following command:
+```bash
+python main.py
+```
+This will perform image segmentation, object identification, text extraction, object summarization, data mapping, and visualization
+
+## Outputs
+Annotated images and summary tables will be saved in the output directory specified in data/output/ directory.
+The final mapping of all data to the master images will be saved in a JSON file, also specified in data/output/ directory.
+
