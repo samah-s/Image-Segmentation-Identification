@@ -73,7 +73,7 @@ pip install -r requirements.txt
 ```
 3. Ensure Tesseract OCR is installed and its path is correctly set in models_dir/text_extraction_model.py.
 
-## Usaage
+## Usage
 
 ### Running the full pipeline
 To execute the entire pipeline, run the following command:
