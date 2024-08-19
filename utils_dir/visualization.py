@@ -30,7 +30,7 @@ def plot_image_with_annotations(master_image_data, output_dir):
     # Draw bounding boxes and annotations for each object
     for obj in master_image_data['objects']:
         bbox = obj['bbox']
-        label = f"{obj['identified_name']} ({obj['unique_id']})"
+        label = f"{obj['unique_id']}"
         draw_bbox(ax, bbox, label, color='blue')
 
     # Save the annotated image

@@ -16,6 +16,7 @@ FINAL_MAPPING_FILE = os.path.join(DATA_DIR, 'output/final_mapping.json')
 OUTPUT_DIR = os.path.join(DATA_DIR, 'output/')
 SEGMENTED_OBJECTS_DIR = os.path.join(DATA_DIR, 'segmented_objects/')
 MASTER_IMAGE_DIR = os.path.join(DATA_DIR, 'input_images/')
+RECORDS_DIR = os.path.join(DATA_DIR, 'records/')
 
 
 

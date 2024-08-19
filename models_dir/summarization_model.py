@@ -79,8 +79,8 @@ def summarize_object_attributes(metadata_file, descriptions_file):
         colors = extract_dominant_color_name(image_path)
         object_id = descriptions.get(os.path.basename(image_path), "Unknown Object")
 
-        if entry['confidence'] < 0.5:
-            description = ""  # Modify if needed
+        if entry['confidence'] < 0.3:
+            description = "No object detected"  # Modify if needed
 
         summaries.append({
             'unique_id': entry['unique_id'],

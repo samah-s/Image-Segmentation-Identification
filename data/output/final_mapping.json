@@ -1,37 +1,112 @@
 {
     "inp_image": {
         "image_path": "Documents/personal/completed-projects/ML/ImageSegmentation/data/input_images/inp_image.jpg",
-        "extracted_text": "",
+        "extracted_text": "HOME IS\nWHERE\nOUR\n\noti\n\nBEGINS",
         "objects": [
             {
                 "unique_id": "inp_image_0",
                 "image_path": "Documents/personal/completed-projects/ML/ImageSegmentation/data/segmented_objects/inp_image_0.jpg",
                 "bbox": [
-                    56,
-                    91,
-                    146,
-                    321
+                    976,
+                    825,
+                    1079,
+                    1076
                 ],
-                "confidence": 0.8859655261039734,
-                "class": 58,
-                "description": "a pot of green plants",
-                "identified_name": "potted plant",
-                "colors": "rosybrown"
+                "confidence": 0.8766865134239197,
+                "class": 75,
+                "description": "a white vase with a white flower in it",
+                "identified_name": "No object detected",
+                "colors": "darkslategray"
             },
             {
                 "unique_id": "inp_image_1",
                 "image_path": "Documents/personal/completed-projects/ML/ImageSegmentation/data/segmented_objects/inp_image_1.jpg",
                 "bbox": [
-                    290,
-                    195,
-                    464,
-                    338
+                    519,
+                    669,
+                    644,
+                    824
                 ],
-                "confidence": 0.5809467434883118,
-                "class": 59,
-                "description": "a living room with a couch and a chair",
-                "identified_name": "bed",
+                "confidence": 0.7989581823348999,
+                "class": 75,
+                "description": "a clock and a vase with flowers in it",
+                "identified_name": "clock",
+                "colors": "silver"
+            },
+            {
+                "unique_id": "inp_image_2",
+                "image_path": "Documents/personal/completed-projects/ML/ImageSegmentation/data/segmented_objects/inp_image_2.jpg",
+                "bbox": [
+                    741,
+                    320,
+                    1078,
+                    1052
+                ],
+                "confidence": 0.7927134037017822,
+                "class": 58,
+                "description": "a white rug with a plant in the middle",
+                "identified_name": "vase",
                 "colors": "rosybrown"
+            },
+            {
+                "unique_id": "inp_image_3",
+                "image_path": "Documents/personal/completed-projects/ML/ImageSegmentation/data/segmented_objects/inp_image_3.jpg",
+                "bbox": [
+                    623,
+                    754,
+                    686,
+                    811
+                ],
+                "confidence": 0.7382160425186157,
+                "class": 74,
+                "description": "a clock with a blue background and a white clock",
+                "identified_name": "fire hydrant",
+                "colors": "darkgray"
+            },
+            {
+                "unique_id": "inp_image_4",
+                "image_path": "Documents/personal/completed-projects/ML/ImageSegmentation/data/segmented_objects/inp_image_4.jpg",
+                "bbox": [
+                    67,
+                    693,
+                    475,
+                    1079
+                ],
+                "confidence": 0.7272037267684937,
+                "class": 56,
+                "description": "a chair with a pillow on it",
+                "identified_name": "couch",
+                "colors": "silver"
+            },
+            {
+                "unique_id": "inp_image_5",
+                "image_path": "Documents/personal/completed-projects/ML/ImageSegmentation/data/segmented_objects/inp_image_5.jpg",
+                "bbox": [
+                    686,
+                    798,
+                    753,
+                    886
+                ],
+                "confidence": 0.6189526915550232,
+                "class": 75,
+                "description": "a glass with a gold rim on top",
+                "identified_name": "refrigerator",
+                "colors": "darkgray"
+            },
+            {
+                "unique_id": "inp_image_6",
+                "image_path": "Documents/personal/completed-projects/ML/ImageSegmentation/data/segmented_objects/inp_image_6.jpg",
+                "bbox": [
+                    470,
+                    559,
+                    693,
+                    826
+                ],
+                "confidence": 0.43838340044021606,
+                "class": 58,
+                "description": "a blue vase with flowers and a clock",
+                "identified_name": "vase",
+                "colors": "silver"
             }
         ]
     }

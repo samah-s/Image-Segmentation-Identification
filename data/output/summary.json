@@ -1,30 +1,100 @@
 [
     {
         "unique_id": "inp_image_0",
-        "description": "a pot of green plants",
+        "description": "a white vase with a white flower in it",
         "bbox": [
-            56,
-            91,
-            146,
-            321
+            976,
+            825,
+            1079,
+            1076
         ],
-        "confidence": 0.8859655261039734,
-        "class": 58,
-        "colors": "rosybrown",
-        "identified_name": "potted plant"
+        "confidence": 0.8766865134239197,
+        "class": 75,
+        "colors": "darkslategray",
+        "identified_name": "No object detected"
     },
     {
         "unique_id": "inp_image_1",
-        "description": "a living room with a couch and a chair",
+        "description": "a clock and a vase with flowers in it",
         "bbox": [
-            290,
-            195,
-            464,
-            338
+            519,
+            669,
+            644,
+            824
         ],
-        "confidence": 0.5809467434883118,
-        "class": 59,
+        "confidence": 0.7989581823348999,
+        "class": 75,
+        "colors": "silver",
+        "identified_name": "clock"
+    },
+    {
+        "unique_id": "inp_image_2",
+        "description": "a white rug with a plant in the middle",
+        "bbox": [
+            741,
+            320,
+            1078,
+            1052
+        ],
+        "confidence": 0.7927134037017822,
+        "class": 58,
         "colors": "rosybrown",
-        "identified_name": "bed"
+        "identified_name": "vase"
+    },
+    {
+        "unique_id": "inp_image_3",
+        "description": "a clock with a blue background and a white clock",
+        "bbox": [
+            623,
+            754,
+            686,
+            811
+        ],
+        "confidence": 0.7382160425186157,
+        "class": 74,
+        "colors": "darkgray",
+        "identified_name": "fire hydrant"
+    },
+    {
+        "unique_id": "inp_image_4",
+        "description": "a chair with a pillow on it",
+        "bbox": [
+            67,
+            693,
+            475,
+            1079
+        ],
+        "confidence": 0.7272037267684937,
+        "class": 56,
+        "colors": "silver",
+        "identified_name": "couch"
+    },
+    {
+        "unique_id": "inp_image_5",
+        "description": "a glass with a gold rim on top",
+        "bbox": [
+            686,
+            798,
+            753,
+            886
+        ],
+        "confidence": 0.6189526915550232,
+        "class": 75,
+        "colors": "darkgray",
+        "identified_name": "refrigerator"
+    },
+    {
+        "unique_id": "inp_image_6",
+        "description": "a blue vase with flowers and a clock",
+        "bbox": [
+            470,
+            559,
+            693,
+            826
+        ],
+        "confidence": 0.43838340044021606,
+        "class": 58,
+        "colors": "silver",
+        "identified_name": "vase"
     }
 ]
