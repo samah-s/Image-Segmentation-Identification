@@ -51,7 +51,7 @@ if uploaded_file is not None:
     visualization.final_output()
 
     # 2. Segmentation Display
-    st.write("Segmented Objects:")
+
     components.display_segmented_objects_image()
 
     st.markdown("---")

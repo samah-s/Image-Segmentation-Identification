@@ -1,9 +1,7 @@
 {
-    "inp_image_0.jpg": "No object detected",
-    "inp_image_1.jpg": "clock",
-    "inp_image_2.jpg": "vase",
-    "inp_image_3.jpg": "fire hydrant",
-    "inp_image_4.jpg": "couch",
-    "inp_image_5.jpg": "refrigerator",
-    "inp_image_6.jpg": "vase"
+    "inp_image_0.jpg": "book",
+    "inp_image_1.jpg": "potted plant",
+    "inp_image_2.jpg": "dining table",
+    "inp_image_3.jpg": "toilet",
+    "inp_image_4.jpg": "No object detected"
 }
