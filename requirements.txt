@@ -15,4 +15,4 @@ matplotlib==3.9.2
 huggingface-hub==0.24.5
 colorthief==0.2.1
 streamlit==1.37.1
-opencv-python==4.10.0.84
+opencv-python-headless
