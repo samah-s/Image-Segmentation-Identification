@@ -73,7 +73,7 @@ git clone https://github.com/your-repo-name/project-name.git
 pip install -r requirements.txt
 ```
 3. Ensure Tesseract OCR is installed and its path is correctly set in models_dir/text_extraction_model.py.
-4. Modify the path to DATA_DIR in utils/path.py which will also set up the path to the project directory from the current working directory
+4. If your working directory is different from the project root directory, modify the path to DATA_DIR in utils/path.py which will also set up the path to the project directory from the current working directory
 
 ## Usage
 
