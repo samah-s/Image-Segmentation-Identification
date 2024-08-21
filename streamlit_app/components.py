@@ -29,7 +29,7 @@ def display_segmented_objects(image_path):
                 'unique_id': file_name.split('.')[0],
                 'image': Image.open(file_path)
             })
-    segmented_objects.sort(key = lambda x: x['unique_id'])
+    segmented_objects.sort(key = lambda x: int(x['unique_id'].split('_')[-1]))
     return segmented_objects
 
 def display_segmented_objects_details(image_path):
