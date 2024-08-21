@@ -79,7 +79,7 @@ pip install -r requirements.txt
 ### Running the full pipeline
 To execute the entire pipeline, run the following command:
 ```bash
-python main.py
+streamlit run app.py
 ```
 This will perform image segmentation, object identification, text extraction, object summarization, data mapping, and visualization
 
