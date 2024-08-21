@@ -12,7 +12,7 @@ os.makedirs(OUTPUT_DIR, exist_ok=True)
 
 # Function to load the model
 def load_model():
-    return torch.hub.load('ultralytics/yolov5', 'yolov5l', pretrained=True)
+    return torch.hub.load('ultralytics/yolov5', 'custom', path='yolov5l.pt')
 
 # Function to process the image and get bounding boxes
 def process_image(model, image_path):

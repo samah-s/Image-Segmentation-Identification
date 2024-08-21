@@ -5,7 +5,7 @@ import json
 from utils_dir.paths import *
 
 # Load the pre-trained YOLOv5 model for object identification
-model = torch.hub.load('ultralytics/yolov5', 'yolov5l', pretrained=True)
+model = torch.hub.load('ultralytics/yolov5', 'custom', path='yolov5l.pt')
 
 def identify_objects(image_dir):
     """

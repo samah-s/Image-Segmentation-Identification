@@ -1,11 +1,11 @@
 {
     "inp_image": {
-        "image_path": "Documents/personal/completed-projects/ML/ImageSegmentation/data/input_images/inp_image.jpg",
+        "image_path": "data/input_images/inp_image.jpg",
         "extracted_text": "HOME IS\nWHERE\nOUR\n\noti\n\nBEGINS",
         "objects": [
             {
                 "unique_id": "inp_image_0",
-                "image_path": "Documents/personal/completed-projects/ML/ImageSegmentation/data/segmented_objects/inp_image_0.jpg",
+                "image_path": "data/segmented_objects/inp_image_0.jpg",
                 "bbox": [
                     976,
                     825,
@@ -20,7 +20,7 @@
             },
             {
                 "unique_id": "inp_image_1",
-                "image_path": "Documents/personal/completed-projects/ML/ImageSegmentation/data/segmented_objects/inp_image_1.jpg",
+                "image_path": "data/segmented_objects/inp_image_1.jpg",
                 "bbox": [
                     519,
                     669,
@@ -35,7 +35,7 @@
             },
             {
                 "unique_id": "inp_image_2",
-                "image_path": "Documents/personal/completed-projects/ML/ImageSegmentation/data/segmented_objects/inp_image_2.jpg",
+                "image_path": "data/segmented_objects/inp_image_2.jpg",
                 "bbox": [
                     741,
                     320,
@@ -50,7 +50,7 @@
             },
             {
                 "unique_id": "inp_image_3",
-                "image_path": "Documents/personal/completed-projects/ML/ImageSegmentation/data/segmented_objects/inp_image_3.jpg",
+                "image_path": "data/segmented_objects/inp_image_3.jpg",
                 "bbox": [
                     623,
                     754,
@@ -65,7 +65,7 @@
             },
             {
                 "unique_id": "inp_image_4",
-                "image_path": "Documents/personal/completed-projects/ML/ImageSegmentation/data/segmented_objects/inp_image_4.jpg",
+                "image_path": "data/segmented_objects/inp_image_4.jpg",
                 "bbox": [
                     67,
                     693,
@@ -80,7 +80,7 @@
             },
             {
                 "unique_id": "inp_image_5",
-                "image_path": "Documents/personal/completed-projects/ML/ImageSegmentation/data/segmented_objects/inp_image_5.jpg",
+                "image_path": "data/segmented_objects/inp_image_5.jpg",
                 "bbox": [
                     686,
                     798,
@@ -95,7 +95,7 @@
             },
             {
                 "unique_id": "inp_image_6",
-                "image_path": "Documents/personal/completed-projects/ML/ImageSegmentation/data/segmented_objects/inp_image_6.jpg",
+                "image_path": "data/segmented_objects/inp_image_6.jpg",
                 "bbox": [
                     470,
                     559,
