@@ -1,7 +1,7 @@
 import os
 
 # Define the paths
-DATA_DIR = 'Documents/personal/completed-projects/ML/ImageSegmentation/data/'
+DATA_DIR = os.path.join('public', 'data')
 
 INPUT_IMAGE_FILE = os.path.join(DATA_DIR, 'input_images/inp_image.jpg')
 
