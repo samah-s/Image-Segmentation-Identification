@@ -7,7 +7,7 @@ from utils_dir.paths import *
 
 
 def upload_image():
-    uploaded_file = st.file_uploader("Upload an image", type=["jpg", "png"])
+    uploaded_file = st.file_uploader("Upload an image", type=["jpg"])
     return uploaded_file
 
 def display_segmented_objects_image():
