@@ -10,7 +10,7 @@ This project involves several steps to perform object detection, segmentation, a
 * Data Mapping: The extracted data (text, object descriptions, and color) is mapped to the original images.
 * Visualization: The results are visualized by generating annotated images and summary table
 
-The project has been hosted on Streamlit Cloud: [https://wasserstoff-aiinterntask.streamlit.app/](https://wasserstoff-aiinterntask.streamlit.app/)
+The project has been hosted on Streamlit Cloud: [https://samah-s-wasserstoff-aiinterntask-app-mraa9j.streamlit.app/](https://samah-s-wasserstoff-aiinterntask-app-mraa9j.streamlit.app/)
 
 
 ## Pipeline Steps
